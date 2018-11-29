@@ -5,11 +5,15 @@
 @import "../popover/common";
 @import "./common";
 
+$tooltip-arrow-square-size: $pt-grid-size * 2 !default;
+$tooltip-arrow-offset: $pt-grid-size / 4 !default;
+$tooltip-arrow-target-offset: -1 * $tooltip-arrow-offset !default;
+
 .#{$ns}-tooltip {
   @include popover-sizing(
-    $arrow-square-size: 22px,
-    $arrow-offset: 3px,
-    $arrow-target-offset: -4px
+    $arrow-square-size: $tooltip-arrow-square-size,
+    $arrow-offset: $tooltip-arrow-offset,
+    $arrow-target-offset: $tooltip-arrow-target-offset
   );
   @include popover-appearance(
     $tooltip-background-color,

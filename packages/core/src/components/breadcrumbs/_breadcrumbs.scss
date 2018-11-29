@@ -85,12 +85,12 @@ Styleguide breadcrumbs
 }
 
 .#{$ns}-breadcrumbs-collapsed {
-  margin-right: 2px;
+  margin-right: $pt-grid-size / 4;
   border: none;
   border-radius: $pt-border-radius;
   background: $light-gray1;
   cursor: pointer;
-  padding: 1px ($pt-grid-size / 2);
+  padding: ($pt-grid-size / 8) ($pt-grid-size / 2);
   vertical-align: text-bottom;
 
   &::before {

@@ -37,7 +37,7 @@ $headings: (
   "h4": (18px, 21px),
   "h5": (16px, 19px),
   "h6": (14px, 16px)
-);
+) !default;
 
 @each $tag, $props in $headings {
   %#{$tag} {
@@ -261,7 +261,7 @@ Styleguide preformatted
   border-radius: $pt-border-radius;
   box-shadow: inset border-shadow(0.2);
   background: $pt-code-background-color;
-  padding: 2px 5px;
+  padding: ($pt-grid-size / 4) ($pt-grid-size / 2);
   color: $pt-code-text-color;
   font-size: smaller;
 
@@ -293,7 +293,7 @@ Styleguide preformatted
   padding: ($pt-grid-size * 1.3) ($pt-grid-size * 1.5) ($pt-grid-size * 1.2);
   line-height: 1.4;
   color: $pt-text-color;
-  font-size: $pt-font-size - 1px;
+  font-size: ($pt-font-size + $pt-font-size-small) / 2;
   word-break: break-all;
   word-wrap: break-word;
 

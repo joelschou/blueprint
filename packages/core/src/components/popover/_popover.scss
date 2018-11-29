@@ -3,13 +3,16 @@
 
 @import "./common";
 
+$popover-arrow-square-size: $pt-grid-size * 3 !default;
+$popover-arrow-offset: $pt-grid-size / 2 !default;
+$popover-arrow-target-offset: -1 * $popover-arrow-offset !default;
 $popover-width: $pt-grid-size * 35 !default;
 
 .#{$ns}-popover {
   @include popover-sizing(
-    $arrow-square-size: 30px,
-    $arrow-offset: 4px,
-    $arrow-target-offset: -4px
+    $arrow-square-size: $popover-arrow-square-size,
+    $arrow-offset: $popover-arrow-offset,
+    $arrow-target-offset: $popover-arrow-target-offset
   );
   @include popover-appearance(
     $popover-background-color,

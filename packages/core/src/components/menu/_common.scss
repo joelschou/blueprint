@@ -154,9 +154,9 @@ $dark-menu-item-color-active: $dark-minimal-button-background-color-active !defa
   @include heading-typography();
   @include overflow-ellipsis();
   margin: 0;
-  padding: $pt-grid-size $menu-item-padding 0 1px;
-  // a little extra space to avoid clipping descenders (because overflow hidden)
-  line-height: $pt-icon-size-standard + 1px;
+  padding: $pt-grid-size $menu-item-padding 0 0;
+  // use menu item line-height to avoid clipping descenders (because overflow hidden)
+  line-height: $menu-item-line-height;
 }
 
 @mixin menu-header-large($heading-selector) {

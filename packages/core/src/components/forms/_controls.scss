@@ -116,7 +116,7 @@ $control-indicator-spacing: $pt-grid-size !default;
   .#{$ns}-control-indicator {
     display: inline-block;
     position: relative;
-    margin-top: -3px;
+    margin-top: -1 * ($pt-line-height * $pt-font-size - $pt-font-size) / 2;
     margin-right: $control-indicator-spacing;
     border: none;
     box-shadow: $button-box-shadow;
@@ -162,7 +162,7 @@ $control-indicator-spacing: $pt-grid-size !default;
   // right-aligned indicator is glued to the right side of the container
   &.#{$ns}-align-right .#{$ns}-control-indicator {
     float: right;
-    margin-top: 1px;
+    margin-top: ($pt-line-height * $pt-font-size - $pt-font-size) / 2;
     margin-left: $control-indicator-spacing;
   }
 
@@ -282,7 +282,7 @@ $control-indicator-spacing: $pt-grid-size !default;
 
   // stylelint-disable-next-line order/order
   $switch-width: 1.75em !default;
-  $switch-indicator-margin: 2px !default;
+  $switch-indicator-margin: $pt-grid-size / 4 !default;
   $switch-indicator-size: calc(1em - #{$switch-indicator-margin * 2});
 
   $switch-background-color: rgba($gray4, 0.5) !default;
